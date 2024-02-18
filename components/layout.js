@@ -3,18 +3,14 @@ import Head from 'next/head';
 import Image from 'next/image';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-import { Overpass_Mono } from 'next/font/google';
 
-const name = 'Ren Johan';
+const name = 'The End Is Never The End Is Never';
 export const siteTitle = 'Personal Writing'
-const overpass = Overpass_Mono({
-    subsets: ['latin'],
-    display: 'swap',
-})
+
 
 export default function Layout({children, home}) {
     return(
-        <div className={overpass && styles.container}>
+        <div className={styles.container}>
             <Head>
             <link rel="icon" href="/favicon.ico"></link>
             <meta
@@ -30,38 +26,12 @@ export default function Layout({children, home}) {
             <meta name="og:title" content={siteTitle}/>
             <meta name="twitter:card" content="summary_large_image" />
             </Head>
-            <header className={styles.header}>
-                {home ? (
-                    <>
-                    <Image
-                        priority
-                        src="/images/moomin.png"
-                        className={utilStyles.borderCircle}
-                        height={144}
-                        width={144}
-                        alt=""
-                        />
-                        <h1 className={utilStyles.heading2x1}>{name}</h1>
-                    </>
-                ) : (
-                    <>
-                        <Link href="/">
-                            <Image
-                                priority
-                                src="/images/moomin.png"
-                                className={utilStyles.borderCircle}
-                                height={108}
-                                width={108}
-                                alt=""
-                                />
-                        </Link>
-                        <h2 className={utilStyles.headingLg}>
-                        <Link href="/" className={utilStyles.colorInherit}>
-                        {name}
-                        </Link>
-                        </h2>
-                    </>
-                )}
+            <header>
+                <div className={utilStyles.heading2Xl}>{name}</div>
+                <br></br>
+                <Link href="/about">About</Link>&nbsp;
+                <Link href="/resources">Resources</Link>&nbsp;
+                <Link href="/">Blog</Link>
             </header>
             <main>{children}</main>
             {!home && (
