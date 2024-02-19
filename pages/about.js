@@ -10,9 +10,11 @@ export default function About(){
                 <title>{siteTitle}</title>
             </Head>
             <section className={utilStyles.headingMd}>
-                <p>IT student in Malaysia. I hack and research!</p>
-                <p>Things I enjoy:</p>
-                <p><b>Film / Music / Personal studies / Penetration Testing / Reverse Engineering / My boyfriend</b></p>
+                <p>I'm from Malaysia. I hack and research (study).</p>
+                <p><b>Things that are cool and I might talk about <sub>but do not claim to know everything about</sub>:</b></p>
+                <p>Film, Music, Video Games, Retro Consoles & Computers, Penetration Testing & Information Security, Reverse Engineering, Software Development, My Love, Data Science, Machine Learning</p>
+                <p><b>Favourite shows:</b></p>
+                <p>Breaking Bad, You, Inside Job, Futurama, Black Mirror</p>
             </section>
         </Layout>
     )
